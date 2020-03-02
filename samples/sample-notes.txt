@@ -1,0 +1,24 @@
+https://sheetmusic-free.com/download/9282/
+
+
+<form class="cart" action="https://drive.google.com/uc?export=download&amp;id=1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN" method="get">
+<button type="submit" class="single_add_to_cart_button button alt">Free Download</button>
+<input type="hidden" name="export" value="download"><input type="hidden" name="id" value="1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN">
+</form>
+
+
+curl "https://sheetmusic-free.com/download/9282/" -H "authority: sheetmusic-free.com" -H "upgrade-insecure-requests: 1" -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36" -H "sec-fetch-dest: document" -H "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" -H "sec-fetch-site: same-origin" -H "sec-fetch-mode: navigate" -H "sec-fetch-user: ?1" -H "referer: https://sheetmusic-free.com/baby-sheet-music-justin-bieber/" -H "accept-language: pl,en-GB;q=0.9,en;q=0.8,en-US;q=0.7" -H "cookie: __cfduid=dea50823f4e8428e46b9825cfef600ed51582887089; cookielawinfo-checkbox-non-necessary=yes; _ga=GA1.2.1004513710.1582887097; viewed_cookie_policy=yes; tk_ai=POXT4o2sHkV^%^2F9Y6vw08D^%^2BNqF; _gid=GA1.2.349156807.1583139832" --compressed
+
+
+Request
+curl "https://drive.google.com/uc?export=download^&id=1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN" -H "authority: drive.google.com" -H "upgrade-insecure-requests: 1" -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36" -H "sec-fetch-dest: document" -H "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" -H "x-chrome-connected: id=108043299420155357562,mode=0,enable_account_consistency=false,consistency_enabled_by_default=false" -H "service-worker-navigation-preload: true" -H "x-client-data: CJC2yQEIpbbJAQjBtskBCKmdygEIt6rKAQjLrsoBCNCvygEIvLDKAQiXtcoBCO21ygEIjrrKARjUscoBGLu6ygE=" -H "sec-fetch-site: cross-site" -H "sec-fetch-mode: navigate" -H "sec-fetch-user: ?1" -H "referer: https://sheetmusic-free.com/download/9282/" -H "accept-language: pl,en-GB;q=0.9,en;q=0.8,en-US;q=0.7" -H "cookie: HSID=AUuY-eTiX6nW-esXm; SSID=Ao6NR4dBBVHOeivr2; APISID=K-xvtVp2ekAwv8ZT/ADu9tEBJ0ofNoc4tv; SAPISID=ZJOEjG_Dsho_E4DD/AeV4hrxX_EPrTCgSf; __Secure-HSID=AUuY-eTiX6nW-esXm; __Secure-SSID=Ao6NR4dBBVHOeivr2; __Secure-APISID=K-xvtVp2ekAwv8ZT/ADu9tEBJ0ofNoc4tv; __Secure-3PAPISID=ZJOEjG_Dsho_E4DD/AeV4hrxX_EPrTCgSf; SID=uAep0fEhYCCSiCk19G67GZWwYrEenZ4xiFcAgr030w6xlXnUjkFWOQbEz2J4gHBtNCteyA.; __Secure-3PSID=uAep0fEhYCCSiCk19G67GZWwYrEenZ4xiFcAgr030w6xlXnUnKB4aPTgQp5V9lHC-b9FyA.; NID=199=M_qZlzwliLF4NayQ9sCRfTmwbU3YHgy-D1SYAFk1kchiQidpeZwZSbhgNjbUA95bTGGqEXUoGH_NJR6DDoV81sgmP3ExT9J1ZV7K2hQDr_swH_S69sjw_vFaLfbI4lWEMtOULyx4Un60HVwjGyGybBJGBTc0IhLJCwd1Kb1cbED_wz_wH_OhuIbx9vZlFWmrhsjIHBZ6DK_lpqiEpDkiIltlixHIsdTge83TLYmcMYkKdov4-SvaRoXPMahzZA; 1P_JAR=2020-3-2-14; S=explorer=rQ31ZuH5I2dAwg3BdqnKxstl16OXJKfQ; SIDCC=AN0-TYtWdqfdYQYsULIAlHoazRTGCXnjotarHT4CCUBqhmw45cmr-DWdNnUFJzSYYcNO_tXt3yjg" --compressed
+Response
+location: https://doc-0c-10-docs.googleusercontent.com/docs/securesc/hbo2nc5tcpvnf6dsmi95a6dhqmcdagp7/t835eq6cmg83g3dhcbb6t12hucnve143/1583157825000/07506286767119635672/12258681050086364783/1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN?e=download&authuser=0
+
+request okrojony co daje ten sam response
+curl "https://drive.google.com/uc?export=download^&id=1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN" 
+
+
+link ktory dziala!
+istotne jest to 1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN
+https://doc-0c-10-docs.googleusercontent.com/docs/securesc/hbo2nc5tcpvnf6dsmi95a6dhqmcdagp7/t835eq6cmg83g3dhcbb6t12hucnve143/1583157825000/07506286767119635672/12258681050086364783/1K1IEAfu-8lnMXAWUNanKvRovNTxG6HgN?e=download&authuser=0
