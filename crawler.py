@@ -1,4 +1,5 @@
 import os
+import sys
 
 from parsing.main_page_parser import MainPageParser
 from parsing.index_page_parser import IndexPageParser
@@ -24,6 +25,8 @@ def crawl_all(base_url, output_dir):
     spp = SheetPageParser()
     dpp = DownloadPageParser()
 
+    counter = 0
+
     main_page_html = get_page_html(base_url)    
     mpp.parse(base_url, main_page_html)
     index_links = mpp.get_index_links()
@@ -33,6 +36,7 @@ def crawl_all(base_url, output_dir):
         index_page_html = get_page_html(index_link)
         ipp.parse(index_link, index_page_html)
         sheet_page_links = ipp.get_sheet_page_links()
+
 
         for sheet_page_link in sheet_page_links:
             #print(sheet_page_link)
@@ -54,8 +58,7 @@ def crawl_all(base_url, output_dir):
                 file_path = F"{artist}_{title}.pdf"
             file_path = remove_bad_characters(file_path)
             file_path = os.path.join(output_dir, file_path)
-
-            counter = 0
+            
             try:
                 download_file(google_drive_link, file_path)
                 print(F"Downloaded: {file_path}")
@@ -63,9 +66,15 @@ def crawl_all(base_url, output_dir):
             except Exception as err:
                 print(F"Exception when downloading {google_drive_link} to {file_path}: {err}")
 
-            print(F"Completed download of {counter} files.")
+    print(F"Completed download of {counter} files.")
 
 
 if __name__ == "__main__":
-    crawl_all("https://sheetmusic-free.com/", "./output")    
+    url = "https://sheetmusic-free.com/"
+    output_dir = "./output"
+    if len(sys.argv) > 2:
+        url = sys.argv[1]
+        output_dir = sys.argv[2]
+
+    crawl_all(url, output_dir)    
     
