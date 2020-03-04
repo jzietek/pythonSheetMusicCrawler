@@ -19,6 +19,10 @@ def remove_bad_characters(path):
 
 
 def download_file(url, file_path):
-    response = urlopen(url)
-    with open(file_path, 'wb') as f:
-        f.write(response.read())
+    try:
+        response = urlopen(url)
+        with open(file_path, 'wb') as f:
+            f.write(response.read())
+        print(F"Downloaded: {file_path}")
+    except Exception as err:
+        print(F"Exception when downloading {url} to {file_path}: {err}")

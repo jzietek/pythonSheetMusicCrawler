@@ -1,5 +1,6 @@
 import os
 import sys
+import _thread
 
 from parsing.main_page_parser import MainPageParser
 from parsing.index_page_parser import IndexPageParser
@@ -11,11 +12,22 @@ from utils import get_page_html
 from utils import download_file
 from utils import remove_bad_characters
     
-def crawl_all(base_url, output_dir):
+
+def narrow_search(index_chars, index_links):
+    if len(index_chars) == 0:
+        return index_links
+    
+    index_chars = index_chars.replace(",", "")
+    result = []
+    for link in index_links:
+        for c in index_chars:
+            if link.endswith(c + "/"): 
+                result += [link]
+    return result
+
+
+def crawl_all(base_url, output_dir, index_chars = ""):
     output_dir = os.path.abspath(output_dir)
-    if not os.path.isdir(output_dir):
-        print(F"Bad output directory path: {output_dir}")
-        return
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
         print(F"Created output directory: {output_dir}")
@@ -25,11 +37,11 @@ def crawl_all(base_url, output_dir):
     spp = SheetPageParser()
     dpp = DownloadPageParser()
 
-    counter = 0
-
     main_page_html = get_page_html(base_url)    
     mpp.parse(base_url, main_page_html)
     index_links = mpp.get_index_links()
+
+    index_links = narrow_search(index_chars, index_links)
         
     for index_link in index_links:
         #print(index_link)
@@ -59,22 +71,24 @@ def crawl_all(base_url, output_dir):
             file_path = remove_bad_characters(file_path)
             file_path = os.path.join(output_dir, file_path)
             
-            try:
+            #_thread.start_new_thread(download_file, (google_drive_link, file_path))
+            if not os.path.exists(file_path):
                 download_file(google_drive_link, file_path)
-                print(F"Downloaded: {file_path}")
-                counter += 1
-            except Exception as err:
-                print(F"Exception when downloading {google_drive_link} to {file_path}: {err}")
 
-    print(F"Completed download of {counter} files.")
+    print(F"Completed.")
 
 
 if __name__ == "__main__":
     url = "https://sheetmusic-free.com/"
     output_dir = "./output"
+    index_chars = ""
+
     if len(sys.argv) > 2:
         url = sys.argv[1]
         output_dir = sys.argv[2]
 
-    crawl_all(url, output_dir)    
+    if len(sys.argv) > 3:
+        index_chars = sys.argv[3]
+
+    crawl_all(url, output_dir, index_chars)    
     
